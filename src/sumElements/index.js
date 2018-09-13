@@ -12,6 +12,17 @@
  */
 const sumElements = arr => {
   /* your logic here...*/
+  let sum = 0;
+
+  sum = arr.reduce((acc, elem) => {
+    if (typeof +acc === 'number' && typeof +elem === 'number') {
+      return acc + elem;
+    }
+  }, 0);
+
+  return sum;
 };
+
+subElements(['1', 'hi', 3]);
 
 export default sumElements;

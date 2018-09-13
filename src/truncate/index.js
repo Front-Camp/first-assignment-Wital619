@@ -9,6 +9,12 @@
  */
 const truncate = (str, length = 0, replacer = '...') => {
   /* your logic here...*/
+  const maxLength = str.length - length;
+  const resStr = str.substr(0, maxLength);
+
+  return resStr.concat(replacer);
 };
+
+truncate('feffeurfhueihg', 5);
 
 export default truncate;

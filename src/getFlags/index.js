@@ -7,6 +7,13 @@
  */
 const getFlags = arr => {
   /* your logic here...*/
+  let sum = [];
+
+  arr.forEach(elem => {
+    sum.push(...[...elem.flags]);
+  });
+  
+  return sum;
 };
 
 export default getFlags;
